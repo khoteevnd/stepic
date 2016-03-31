@@ -44,7 +44,7 @@ while _running:
     #talkToClient (channel, details).start ()
     #clientSock, addr = _connector.accept()
     while True:
-        recvData = clientSock.recv(_recvBudffer)
+        recvData = clientSock.recv(_recvBuffer)
         if not recvData:
                 clientSock.send('bye')
                 break
