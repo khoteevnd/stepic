@@ -41,6 +41,17 @@ while _running:
     printd ('Running on ' + _host + ':' + str (_port) + '.')
     channel, details = _connector.accept ()
     printd ('Conect on : ' + str (details))
-    talkToClient (channel, details).start ()
+    #talkToClient (channel, details).start ()
+    clientSock, addr = _connector.accept()
+    while True:
+        recvData = clientSock.recv(_recvBudffer)
+        if not recvData:
+                clientSock.send ('bye')
+                break
+        printd('Client ' + str (self.addr) + ' say "' + str (recvData) + '"')
+        clientSock.send (recvData)
+        if recvData == "close":
+                break
+    self.clientSock.close ()
 
 _connector.close ()
