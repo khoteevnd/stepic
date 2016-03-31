@@ -29,7 +29,7 @@ class talkToClient (threading.Thread):
                 break
             printd('Client ' + str (self.addr) + ' say "' + str (recvData) + '"')
             self.clientSock.send (recvData)
-            if recvData == "exit":
+            if recvData == "close":
                 break
         self.clientSock.close ()
 
