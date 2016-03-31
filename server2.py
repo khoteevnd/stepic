@@ -9,7 +9,7 @@ _running = True
 
 _host = '0.0.0.0'
 _port = 2222
-_maxClient = 10
+_maxClient = 11
 _recvBuffer = 1024
 
 def printd (aString):
