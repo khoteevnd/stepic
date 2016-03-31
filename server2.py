@@ -40,7 +40,7 @@ _connector.listen(int(_maxClient))
 while _running:
     printd('Running on ' + _host + ':' + str(_port) + '.')
     clientSock, addr = _connector.accept()
-    printd('Conect on : ' + str (details))
+    printd('Conect on : ' + str (addr))
     #talkToClient (channel, details).start ()
     #clientSock, addr = _connector.accept()
     while True:
