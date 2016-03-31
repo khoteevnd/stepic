@@ -15,7 +15,7 @@ s.listen(10)
   while True:
     conn, addr = s.accept()
     while True:
-      data = myrecv(conn, 1024) //conn.recv(1024)
+      data = myrecv(conn, 1024)
       if not data: break
       conn.send(data)
     conn.close()
