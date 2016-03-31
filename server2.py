@@ -9,7 +9,7 @@ _running = True
 
 _host = '0.0.0.0'
 _port = 2222
-_maxClient = 11
+_maxClient = 99
 _recvBuffer = 1024
 
 def printd(aString):
@@ -42,7 +42,6 @@ while _running:
     clientSock, addr = _connector.accept()
     printd('Conect on : ' + str (addr))
     #talkToClient (channel, details).start ()
-    #clientSock, addr = _connector.accept()
     while True:
         recvData = clientSock.recv(_recvBuffer)
         if not recvData:
