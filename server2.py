@@ -52,6 +52,6 @@ while _running:
         clientSock.send(recvData)
         if recvData == "close":
                 break
-    self.clientSock.close()
+    clientSock.close()
 
 _connector.close()
