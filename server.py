@@ -1,4 +1,4 @@
-import socket
+import socket, sys
 
 def myrecv(sock, msglen):
   msg = ''
@@ -15,7 +15,7 @@ s.listen(10)
 while True:
   conn, addr = s.accept()
   while True:
-    data = myrecv(conn, 1024)
+    data = myrecv(conn, 64)
     if not data: break
     conn.send(data)
   conn.close()
