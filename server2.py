@@ -49,7 +49,7 @@ while _running:
                 break
         printd('Client ' + str(addr) + ' say "' + str(recvData) + '"')
         clientSock.send(recvData)
-        if recvData == "close":
+        if recvData == "data":
                 break
     clientSock.close()
 
